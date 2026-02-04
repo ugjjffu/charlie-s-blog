@@ -1,5 +1,5 @@
 import { getAllPosts } from "../lib/posts";
-import HeroPage from "../components/HeroPage";
+import HeroPage from "../components/Heropage";
 
 export default function Home() {
   const posts = getAllPosts();
