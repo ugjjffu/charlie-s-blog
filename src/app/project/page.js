@@ -132,7 +132,7 @@ const ProjectsPage = () => {
             description: 'official website of vertex studio',
             image: '/official_website.png',
             sourceUrl: 'https://github.com/ugjjffu/official_website',
-            link: "https://htb-three.vercel.app/",
+            link: "https://vertex-studio-psi.vercel.app/",
             tags: ['喜爱', '开源'],
             caption: "测试caption",
             liked: false,
