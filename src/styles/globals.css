@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-cream: #f5f0eb;
+  --color-ink: #1a1a1a;
+  --color-ash: #6b6b6b;
+  --color-rust: #c25b3e;
+  --color-sage: #6b7f5e;
+  --color-warm: #e8ddd3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: "DM Sans", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── Prose (Markdown) Overrides ─── */
+.prose {
+  color: var(--color-ink);
+  max-width: 680px;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: var(--color-ink);
+}
+
+.prose h2 {
+  font-size: 1.6rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  border-bottom: 1px solid var(--color-warm);
+  padding-bottom: 0.4rem;
+}
+
+.prose h3 {
+  font-size: 1.2rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.prose p {
+  line-height: 1.85;
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+  color: #3a3a3a;
+}
+
+.prose a {
+  color: var(--color-rust);
+  text-decoration: none;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color 0.2s;
+}
+.prose a:hover {
+  border-color: var(--color-rust);
+}
+
+.prose ul,
+.prose ol {
+  margin: 1.25rem 0;
+  padding-left: 1.6rem;
+}
+.prose li {
+  margin-bottom: 0.5rem;
+  line-height: 1.7;
+  color: #3a3a3a;
+}
+.prose ul li {
+  list-style-type: none;
+  position: relative;
+  padding-left: 1rem;
+}
+.prose ul li::before {
+  content: "—";
+  position: absolute;
+  left: -1.2rem;
+  color: var(--color-rust);
+  font-weight: 600;
+}
+
+.prose code:not(pre code) {
+  background: var(--color-warm);
+  color: var(--color-rust);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.88em;
+}
+
+.prose pre {
+  background: var(--color-ink);
+  border-radius: 10px;
+  padding: 1.25rem 1.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  position: relative;
+}
+.prose pre code {
+  color: #e2ddd8;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  background: transparent;
+  padding: 0;
+}
+
+.prose blockquote {
+  border-left: 3px solid var(--color-rust);
+  padding: 0.4rem 0 0.4rem 1.25rem;
+  margin: 1.5rem 0;
+  background: var(--color-warm);
+  border-radius: 0 8px 8px 0;
+}
+.prose blockquote p {
+  color: var(--color-ash);
+  font-style: italic;
+  margin: 0;
+}
+
+.prose hr {
+  border: none;
+  border-top: 1px solid var(--color-warm);
+  margin: 2.5rem 0;
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.93rem;
+}
+.prose th {
+  background: var(--color-warm);
+  text-align: left;
+  padding: 0.7rem 1rem;
+  font-weight: 600;
+  border-bottom: 2px solid var(--color-ink);
+  font-family: "DM Sans", sans-serif;
+}
+.prose td {
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid var(--color-warm);
+}
+.prose tr:last-child td {
+  border-bottom: none;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-warm);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d0c5b8;
+}
+
+/* ─── Toast ─── */
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(120%);
+  background: var(--color-ink);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  z-index: 1000;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+}
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+}
