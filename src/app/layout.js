@@ -1,5 +1,5 @@
 import "../styles/globals.css";
-
+import { Analytics } from "@vercel/analytics/next"
 export const metadata = {
   title: "My Blog",
   description: "A personal blog built with Next.js and Markdown.",
@@ -23,7 +23,10 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics></Analytics>
+      </body>
     </html>
   );
 }
