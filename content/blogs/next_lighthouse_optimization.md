@@ -38,4 +38,8 @@ solution: 用NEXTJS IMAGE代替img实现图像自动切分
 solution:写上alt优化SEO和无障碍
 
 我的网站优化后结果:
+
+mobile:
 ![score](/lighthouse_score.png)
+pc:
+![pc_score](/pc_lighthouse_score.jpg)
