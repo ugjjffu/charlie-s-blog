@@ -67,13 +67,13 @@ export default function BlogDetailPage({ params }) {
             </div>
           )}
           {/* Edit button */}
-          <Link
-            href={`/blog/${post.slug}/edit`}
+          {/* <Link
+            // href={`/blog/${post.slug}/edit`}
             className="ml-auto text-xs font-semibold px-3 py-1 rounded-full transition-colors hover:bg-warm"
             style={{ color: "#c25b3e", border: "1px solid #c25b3e" }}
           >
             Edit
-          </Link>
+          </Link> */}
         </div>
 
         {/* Divider */}
