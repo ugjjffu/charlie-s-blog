@@ -19,10 +19,11 @@ solution: 引入critter在服务端内联css,而不是在客户端获取
 
 2.layout thrashing
 原理:频繁读写dom导致性能降低
-from that img you could find that forceful reordering 100ms
+solution:去掉间隔读写dom的代码
 
 3.LCP图像应该被preload提高优先级
 原理:LCP的图片应该被提前加载,以减少LCP
+solution:preload 所有lcp图像
 
 4.AMAP,高德地图不支持缓存图像
 原理:高德地图,请求返回拒绝缓存
@@ -30,12 +31,11 @@ firstly,cache img by myself amap返回响应头不支持缓存,所以nextjs反�
 
 5.图像大小固定,导致小屏加载大图像
 原理:小屏幕不应该返回大图像,需要切分图像
-solution: adjust img size in different device,exp: img_562.jpg img_1124.jpg img_1686.jpg,CDN/Nextjs自带功能
+solution: 用NEXTJS IMAGE代替img实现图像自动切分
 
 6.图片没有alt导致无障碍评分低
 原理:没有alt导致screen reader读不到,对盲人不友好
-alt of img is necessary
+solution:写上alt优化SEO和无障碍
 
-
-7.img换成Image
-配置域名,允许特定域名image访问
+我的网站优化后结果:
+![score](/lighthouse_score.png)
