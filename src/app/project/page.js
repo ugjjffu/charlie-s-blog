@@ -105,7 +105,7 @@ const ProjectsPage = () => {
             title: 'charlie_blog',
             description: '🦖 charlie的个人博客',
             image: '/charlie_blog.jpg',
-            sourceUrl: 'https://github.com/kuizuo/blog',
+            sourceUrl: 'https://github.com/ugjjffu/blog',
             link: "https://htb-three.vercel.app/",
             tags: ['喜爱', '开源', '设计'],
             caption: "测试caption",

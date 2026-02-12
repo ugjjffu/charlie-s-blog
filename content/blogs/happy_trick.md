@@ -4,7 +4,7 @@ date: "2026-02-11"
 excerpt: 幸福的秘诀
 tags:
   - happy
-  - exepetation_management
+  - expectation_management
   - 幸福
   - 心态
 coverEmoji: 
